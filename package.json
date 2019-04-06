@@ -1,0 +1,16 @@
+{
+	"name": "codemirror-syntax-themes",
+	"version": "0.1.1",
+	"description": "Some extra syntax themes for CodeMirror",
+	"main": "index.js",
+	"repository": "https://github.com/RailRunner166/codemirror-themes.git",
+	"author": "Landon Gravat <railinator4903@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"build": "gulp less"
+	},
+	"devDependencies": {
+		"gulp": "^4.0.0",
+		"gulp-less": "^4.0.1"
+	}
+}
