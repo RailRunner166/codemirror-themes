@@ -1,0 +1,9 @@
+.cm-s-charcoal span.cm-keyword {
+  color: #c594c5;
+}
+.cm-s-charcoal span.cm-comment {
+  color: #5f6364;
+}
+.cm-s-charcoal span.cm-def {
+  color: #fac863;
+}
