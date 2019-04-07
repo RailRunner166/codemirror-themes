@@ -19,7 +19,9 @@
 .cm-s-wombat div.CodeMirror-selected {
   background: #444444;
 }
-.cm-s-wombat span.cm-keyword {
+.cm-s-wombat span.cm-keyword,
+.cm-s-wombat span.cm-operator,
+.cm-s-wombat span.cm-tag {
   color: #ff8f7e;
 }
 .cm-s-wombat span.cm-comment {
@@ -37,18 +39,12 @@
 .cm-s-wombat span.cm-string-2 {
   color: #a6e22e;
 }
-.cm-s-wombat span.cm-operator {
-  color: #ff8f7e;
-}
 .cm-s-wombat span.cm-property {
   color: #88b8f6;
 }
 .cm-s-wombat span.cm-variable,
 .cm-s-wombat span.cm-variable-2 {
   color: #f8f8f0;
-}
-.cm-s-wombat span.cm-tag {
-  color: #ff8f7e;
 }
 .cm-s-wombat span.cm-meta {
   color: #aaaaaa;
@@ -64,7 +60,8 @@
   color: #88b8f6;
   font-style: italic;
 }
-.cm-s-wombat span.cm-error {
+.cm-s-wombat span.cm-error,
+.cm-s-wombat span.cm-invalid {
   background-color: #ff8f7e;
   color: #f8f8f0;
 }

@@ -42,7 +42,7 @@
 	}
 
 	& span {
-		&.cm-keyword {
+		&.cm-keyword, &.cm-operator, &.cm-tag {
 			color: @red;
 		}
 
@@ -64,20 +64,12 @@
 			color: @lime;
 		}
 
-		&.cm-operator {
-			color: @red;
-		}
-
 		&.cm-property {
 			color: @blue;
 		}
 
 		&.cm-variable, &.cm-variable-2 {
 			color: @white;
-		}
-
-		&.cm-tag {
-			color: @red;
 		}
 
 		&.cm-meta {
@@ -97,7 +89,7 @@
 			font-style: italic
 		}
 
-		&.cm-error {
+		&.cm-error, &.cm-invalid {
 			background-color: @red;
 			color: @white;
 		}

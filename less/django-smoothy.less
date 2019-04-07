@@ -1,0 +1,40 @@
+@orange: #fd6209;
+@dark_green: #245032;
+@white: #f8f8f8;
+@yellow: #ffe862;
+@lime: #9cf340;
+@green: #e1ffb8;
+
+.cm-s-django-smoothy {
+	&.CodeMirror, & .CodeMirror-gutters {
+		background-color: @dark_green;
+		color: @white;
+	}
+
+	& span {
+		&.cm-comment {
+			color: @orange;
+		}
+
+		&.cm-keyword {
+			color: @yellow;
+			font-weight: bold;
+		}
+
+		&.cm-atom {
+			font-weight: bold;
+			font-style: italic;
+			color: @lime;
+		}
+
+		&.cm-error, &.cm-invalid {
+			background-color: @lime;
+			color: @white;
+		}
+
+		&.cm-string {
+			color: @green;
+			font-style: italic;
+		}
+	}
+}

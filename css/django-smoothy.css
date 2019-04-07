@@ -1,0 +1,26 @@
+.cm-s-django-smoothy.CodeMirror,
+.cm-s-django-smoothy .CodeMirror-gutters {
+  background-color: #245032;
+  color: #f8f8f8;
+}
+.cm-s-django-smoothy span.cm-comment {
+  color: #fd6209;
+}
+.cm-s-django-smoothy span.cm-keyword {
+  color: #ffe862;
+  font-weight: bold;
+}
+.cm-s-django-smoothy span.cm-atom {
+  font-weight: bold;
+  font-style: italic;
+  color: #9cf340;
+}
+.cm-s-django-smoothy span.cm-error,
+.cm-s-django-smoothy span.cm-invalid {
+  background-color: #9cf340;
+  color: #f8f8f8;
+}
+.cm-s-django-smoothy span.cm-string {
+  color: #e1ffb8;
+  font-style: italic;
+}
