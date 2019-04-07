@@ -1,19 +1,84 @@
+@import './includes/hints.mixin.less';
+
+// Colors
 @purple: #c594c5;
 @gray: #5f6364;
 @yellow: #fac863;
+@black: #2b2c2f;
+@white: #cccece;
+@orange: #f99157;
+@green: #99c794;
+@aqua: #5fb3b3;
+@red: #eb606b;
 
+@selection: #3e4044;
+
+// Theme Logic
 .cm-s-charcoal {
+	&.CodeMirror, & .CodeMirror-gutters {
+		background-color: @black;
+		color: @white;
+	}
+
+	& .CodeMirror-gutters {
+	    border-right: 0px;
+	}
+
+	& .CodeMirror-linenumber {
+		color: @gray;
+	}
+
+	& .CodeMirror-cursor {
+		border-left: 1px solid @white;
+	}
+
+	& .CodeMirror-matchingbracket {
+		border-bottom: 0.75px solid @white;
+		color: @white !important;
+	}
+
+	& div.CodeMirror-selected {
+		background: @selection;
+	}
+
 	& span {
-		&.cm-keyword {
-			color: @purple;
-		}
-
-		&.cm-comment {
-			color: @gray;
-		}
-
 		&.cm-def {
 			color: @yellow;
 		}
+
+		&.cm-number, &.cm-atom {
+			color: @orange;
+		}
+
+		&.cm-string {
+			color: @green;
+
+			&-2 {
+				color: @aqua;
+			}
+		}
+
+		&.cm-operator {
+			color: @aqua;
+		}
+
+		&.cm-attribute, &.cm-variable-3, &.cm-keyword {
+			color: @purple;
+		}
+
+		&.cm-tag {
+			color: @red;
+
+			&.cm-bracket {
+				color: @aqua
+			}
+		}
+
+		&.cm-meta, &.cm-comment {
+			color: @gray;
+		}
 	}
 }
+
+// Addon Styling
+.hints(charcoal, @white, @black, @selection);

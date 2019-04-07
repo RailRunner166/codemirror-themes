@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<title>CodeMirror Syntax Themes</title>
+
+		<link rel='stylesheet' type='text/css' media='all' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/codemirror.min.css' />
+		<link rel='stylesheet' type='text/css' media='all' href='css/charcoal.css' />
+		<link rel='stylesheet' type='text/css' media='all' href='css/wombat.css' />
+	</head>
+	<body>
+		<textarea id="code" name="code">&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Your Title Here&lt;/title&gt;
+		&lt;style&gt;
+			html, body {
+				margin: 0;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body bgcolor=&quot;ffffff&quot;&gt;
+		&lt;a href=&quot;http://somegreatsite.com&quot;&gt;Link Name&lt;/a&gt;
+		is a link to another nifty site
+		&lt;h1&gt;This is a Header&lt;/h1&gt;
+		&lt;h2&gt;This is a Medium Header&lt;/h2&gt;
+		Send me mail at &lt;a href=&quot;mailto:support@yourcompany.com&quot;&gt;support@yourcompany.com&lt;/a&gt;.
+		&lt;p&gt; This is a new paragraph!&lt;/p&gt;
+		&lt;p&gt; &lt;b&gt;This is a new paragraph!&lt;/b&gt;&lt;/p&gt;
+		&amp;amp;
+		&lt;script&gt;
+			var foo = 1, bar = true, baz = 'yeet', re = /./g;
+
+			if (foo == bar) {
+				alert('thanks for inventing javascript :^)');
+			}
+		&lt;/script&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</textarea>
+
+		<select onchange="selectTheme()" id=select>
+			<option selected>wombat</option>
+			<option>charcoal</option>
+		</select>
+
+		<script type='application/javascript' charset='utf-8' src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/codemirror.min.js'></script>
+
+		<!-- CodeMirror Languages -->
+		<script type='application/javascript' charset='utf-8' src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/xml/xml.min.js'></script>
+		<script type='application/javascript' charset='utf-8' src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/javascript/javascript.min.js'></script>
+		<script type='application/javascript' charset='utf-8' src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/css/css.min.js'></script>
+		<script type='application/javascript' charset='utf-8' src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.44.0/mode/htmlmixed/htmlmixed.min.js'></script>
+
+		<script type='application/javascript'>
+			var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+				mode: 'htmlmixed',
+    			lineNumbers: true,
+    			styleActiveLine: true,
+    			matchBrackets: true
+			});
+			var input = document.getElementById('select');
+			function selectTheme() {
+    			var theme = input.options[input.selectedIndex].textContent;
+    			editor.setOption('theme', theme);
+    			location.hash = '#' + theme;
+			}
+  			var choice = (location.hash && location.hash.slice(1)) ||
+  				(document.location.search &&
+				decodeURIComponent(document.location.search.slice(1)));
+  			if (choice) {
+				input.value = choice;
+    			editor.setOption('theme', choice);
+			}
+
+			CodeMirror.on(window, 'hashchange', function() {
+				var theme = location.hash.slice(1);
+    			if (theme) { input.value = theme; selectTheme(); }
+  			});
+  		</script>
+	</body>
+</html>

@@ -1,3 +1,5 @@
+@import './includes/hints.mixin.less';
+
 // Colors
 @red: #ff8f7e;
 @white: #f8f8f0;
@@ -58,11 +60,7 @@
 			text-decoration: underline;
 		}
 
-		&.cm-string {
-			color: @lime;
-		}
-
-		&.cm-string-2 {
+		&.cm-string, &.cm-string-2 {
 			color: @lime;
 		}
 
@@ -74,11 +72,7 @@
 			color: @blue;
 		}
 
-		&.cm-variable {
-			color: @white;
-		}
-
-		&.cm-variable-2 {
+		&.cm-variable, &.cm-variable-2 {
 			color: @white;
 		}
 
@@ -110,15 +104,5 @@
 	}
 }
 
-.CodeMirror-hints.wombat {
-	color: @white !important;
-	background-color: @black !important;
-
-	& .CodeMirror-hint {
-		&-active {
-			background-color: @selection !important;
-		}
-		
-		color: @white !important;
-	}
-}
+// Addon Stying
+.hints(wombat, @white, @black, @selection);

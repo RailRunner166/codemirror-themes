@@ -1,0 +1,14 @@
+.hints(@name, @text_color, @normal_bg, @selected_bg) {
+	.CodeMirror-hints.@{name} {
+		color: @text_color !important;
+		background-color: @normal_bg !important;
+
+		& .CodeMirror-hint {
+			&-active {
+				background-color: @selected_bg !important;
+			}
+
+			color: @text_color !important;
+		}
+	}
+}

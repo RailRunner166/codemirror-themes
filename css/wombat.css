@@ -33,9 +33,7 @@
   color: #88b8f6;
   text-decoration: underline;
 }
-.cm-s-wombat span.cm-string {
-  color: #a6e22e;
-}
+.cm-s-wombat span.cm-string,
 .cm-s-wombat span.cm-string-2 {
   color: #a6e22e;
 }
@@ -45,9 +43,7 @@
 .cm-s-wombat span.cm-property {
   color: #88b8f6;
 }
-.cm-s-wombat span.cm-variable {
-  color: #f8f8f0;
-}
+.cm-s-wombat span.cm-variable,
 .cm-s-wombat span.cm-variable-2 {
   color: #f8f8f0;
 }
