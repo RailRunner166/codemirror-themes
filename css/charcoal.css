@@ -13,8 +13,8 @@
   border-left: 1px solid #cccece;
 }
 .cm-s-charcoal .CodeMirror-matchingbracket {
-  border-bottom: 0.75px solid #cccece;
-  color: #cccece !important;
+  text-decoration: underline;
+  text-decoration-color: #cccece !important;
 }
 .cm-s-charcoal div.CodeMirror-selected {
   background: #3e4044;

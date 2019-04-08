@@ -13,11 +13,11 @@
   border-left: 1px solid #f8f8f0;
 }
 .cm-s-wombat .CodeMirror-matchingbracket {
-  border-bottom: 0.75px solid #f8f8f0;
-  color: #f8f8f0 !important;
+  text-decoration: underline;
+  text-decoration-color: #f8f8f0 !important;
 }
 .cm-s-wombat div.CodeMirror-selected {
-  background: #444444;
+  background-color: #444444;
 }
 .cm-s-wombat span.cm-keyword,
 .cm-s-wombat span.cm-operator,

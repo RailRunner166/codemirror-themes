@@ -4,6 +4,7 @@
 @yellow: #ffe862;
 @lime: #9cf340;
 @green: #e1ffb8;
+@yellow_orange: #fec758;
 
 .cm-s-django-smoothy {
 	&.CodeMirror, & .CodeMirror-gutters {
@@ -21,7 +22,7 @@
 			font-weight: bold;
 		}
 
-		&.cm-atom {
+		&.cm-atom &.cm-number {
 			font-weight: bold;
 			font-style: italic;
 			color: @lime;
@@ -29,12 +30,16 @@
 
 		&.cm-error, &.cm-invalid {
 			background-color: @lime;
-			color: @white;
+			color: @dark_green;
 		}
 
 		&.cm-string {
 			color: @green;
 			font-style: italic;
+		}
+
+		&.cm-tag, &.cm-attribute {
+			color: @yellow_orange;
 		}
 	}
 }

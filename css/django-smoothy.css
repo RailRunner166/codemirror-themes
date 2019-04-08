@@ -10,7 +10,7 @@
   color: #ffe862;
   font-weight: bold;
 }
-.cm-s-django-smoothy span.cm-atom {
+.cm-s-django-smoothy span.cm-atom .cm-s-django-smoothy span.cm-number {
   font-weight: bold;
   font-style: italic;
   color: #9cf340;
@@ -18,9 +18,13 @@
 .cm-s-django-smoothy span.cm-error,
 .cm-s-django-smoothy span.cm-invalid {
   background-color: #9cf340;
-  color: #f8f8f8;
+  color: #245032;
 }
 .cm-s-django-smoothy span.cm-string {
   color: #e1ffb8;
   font-style: italic;
+}
+.cm-s-django-smoothy span.cm-tag,
+.cm-s-django-smoothy span.cm-attribute {
+  color: #fec758;
 }
