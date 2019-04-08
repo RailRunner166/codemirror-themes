@@ -1,6 +1,6 @@
 {
 	"name": "codemirror-syntax-themes",
-	"version": "0.3.3",
+	"version": "0.3.4",
 	"description": "Some extra syntax themes for CodeMirror",
 	"main": "index.js",
 	"repository": "https://github.com/RailRunner166/codemirror-themes.git",
