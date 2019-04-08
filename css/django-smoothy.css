@@ -3,6 +3,22 @@
   background-color: #245032;
   color: #f8f8f8;
 }
+.cm-s-django-smoothy .CodeMirror-gutters {
+  border-right: 0px;
+}
+.cm-s-django-smoothy .CodeMirror-linenumber {
+  color: #f8f8f8;
+}
+.cm-s-django-smoothy .CodeMirror-cursor {
+  border-left: 1px solid #f8f8f8;
+}
+.cm-s-django-smoothy .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  text-decoration-color: #f8f8f8 !important;
+}
+.cm-s-django-smoothy div.CodeMirror-selected {
+  background-color: #336442;
+}
 .cm-s-django-smoothy span.cm-comment {
   color: #fd6209;
 }
@@ -27,4 +43,7 @@
 .cm-s-django-smoothy span.cm-tag,
 .cm-s-django-smoothy span.cm-attribute {
   color: #fec758;
+}
+.cm-s-django-smoothy span.cm-meta {
+  color: #989898;
 }

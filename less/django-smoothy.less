@@ -5,11 +5,35 @@
 @lime: #9cf340;
 @green: #e1ffb8;
 @yellow_orange: #fec758;
+@gray: #989898;
+
+@selection: #336442;
 
 .cm-s-django-smoothy {
 	&.CodeMirror, & .CodeMirror-gutters {
 		background-color: @dark_green;
 		color: @white;
+	}
+
+	& .CodeMirror-gutters {
+	    border-right: 0px;
+	}
+
+	& .CodeMirror-linenumber {
+		color: @white;
+	}
+
+	& .CodeMirror-cursor {
+		border-left: 1px solid @white;
+	}
+
+	& .CodeMirror-matchingbracket {
+		text-decoration: underline;
+		text-decoration-color: @white !important;
+	}
+
+	& div.CodeMirror-selected {
+		background-color: @selection;
 	}
 
 	& span {
@@ -40,6 +64,10 @@
 
 		&.cm-tag, &.cm-attribute {
 			color: @yellow_orange;
+		}
+
+		&.cm-meta {
+			color: @gray;
 		}
 	}
 }
